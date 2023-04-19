@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules and GitHub</title>
+    <link type="text/css" rel="stylesheet" href="/staticx/udemy/js/webpack/udlite-common-css.230019df1964230f1ef2.css">
+</head>
+
+<body>
+    <div class="text-viewer--container--18Ayx">
+        <div class="text-viewer--content--3hoqQ">
+            <div class="a1 mb-space-md">Commands - Create and Publish a Module on GitHub</div>
+            <div class="p-space-md">
+                <div data-purpose="safely-set-inner-html:rich-text-viewer:html" class="article-asset--content--1dAQ9">
+                    <h4><strong>Creating Your Own Go Module</strong></h4>
+                    <p><br></p>
+                    <p>Consider the following steps to create your own Go module and publish it on GitHub.</p>
+                    <p>Create a <a rel="noopener noreferrer" href="https://github.com/">free GitHub account</a> if you
+                        don’t
+                        have one.</p>
+                    <p><strong>1.</strong> Using the browser, create a new repository on GitHub</p>
+                    <p>e.g. go_math</p>
+                    <p><br></p>
+                    <p><strong>2.</strong> Create a directory for the module anywhere on the disk. Inside it create a
+                        directory for each package of the module.</p>
+                    <p>The name of the directory will be the name of the module on GitHub.</p>
+                    <p>Write the code for each package.</p>
+                    <p>Don’t forget to export all names! That means that the first letter of each name must be
+                        uppercase.
+                    </p>
+                    <p><br></p>
+                    <p><strong>3.</strong> The next step is to initialize the module by running <strong>go mod init and
+                            the
+                            module path</strong> from the module directory. This will generate<strong> go.mod
+                        </strong>file
+                        that stores the import path and any dependencies.</p>
+                    <p><strong>e.g. go mod init github.com/ddadumitrescu/go_math</strong></p>
+                    <p><br></p>
+                    <p><strong>The executed commands:</strong></p>
+                    <p><em>$mkdir go_math</em></p>
+                    <p><em>$cd go_math/</em></p>
+                    <p><em>$mkdir calc geometry</em></p>
+                    <p><em>$go mod init github.com/ddadumitrescu/go_math</em></p>
+                    <p><em>go: creating new go.mod: module github.com/ddadumitrescu/go_math</em></p>
+                    <p><em>$cat go.mod</em></p>
+                    <p><em>module github.com/ddadumitrescu/go_math</em></p>
+                    <p><br></p>
+                    <p><em>go 1.13</em></p>
+                    <p><em>$cd ..</em></p>
+                    <p><em>$ls</em></p>
+                    <p><em>go_math</em></p>
+                    <p><em>$tree .</em></p>
+                    <p><em>.</em></p>
+                    <p><em>└── go_math</em></p>
+                    <p><em>├── calc</em></p>
+                    <p><em>├── geometry</em></p>
+                    <p><em>└── go.mod</em></p>
+                    <p><br></p>
+                    <p><em>3 directories, 1 file</em></p>
+                    <h4></h4>
+                    <p><br></p>
+                    <h4><strong>Publish the Module on GitHub</strong></h4>
+                    <p><br></p>
+                    <p>Move to the module directory (e.g. cd go_math)</p>
+                    <p><strong>1.</strong> Initialize the local module folder as a git repository.</p>
+                    <p><strong>git init</strong></p>
+                    <p><strong>2. </strong>Add the remote repository and give it the name origin</p>
+                    <p><strong>git remote add origin </strong><a rel="noopener noreferrer"
+                            href="https://github.com/ddadumitrescu/go_math.git"><strong>https://github.com/ddadumitrescu/go_math.git</strong></a>
+                    </p>
+                    <p>Check the name and the URL of the remote repository: <strong>git remote -v</strong></p>
+                    <p><strong>3. </strong>Add all files from the current directory to the staging area.</p>
+                    <p><strong>git add -A</strong></p>
+                    <p><strong>4.</strong> Set some variables</p>
+                    <p><strong>git config user.name "andrei"</strong></p>
+                    <p><strong>git config user.email "</strong><a rel="noopener noreferrer"
+                            href="mailto:someone@someplace.com"><strong>someone@someplace.com</strong></a><strong>"</strong>
+                    </p>
+                    <p><strong>5. </strong>Commit the changes</p>
+                    <p><strong>git commit -m "some init msg"</strong></p>
+                    <p><strong>6. </strong>Synchronize the local and remote repositories.</p>
+                    <p><strong>git push -u -f origin master</strong></p>
+                    <p><em>Authenticating …</em></p>
+                    <p>Now the local and the remote repositories are synchronized.</p>
+                    <p><strong>7. Version the module or make the first release.</strong></p>
+                    <p>Create a git tag:</p>
+                    <p><strong>git tag -a v1.0.0 -m "initial release"</strong></p>
+                    <p><strong>git push origin master --tags</strong></p>
+                    <p>Authenticating ...</p>
+                </div>
+            </div>
+            <div class="mt-space-sm"></div>
+        </div>
+    </div>
+</body>
+
+</html>
